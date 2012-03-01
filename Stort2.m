@@ -42,7 +42,7 @@ clc;
 % % disp('x^2 tol=0.000001');
 % % syms x;
 % % f = x^2;
-% % a = 0;
+%    % a = 0;
 % % b = 5;
 % % tol = 0.000001;
 % % figure;
@@ -58,11 +58,16 @@ clc;
 % % figure;
 % % ezplot(f,[a-1,b+1]);
 % % Heildi(f,a,b,tol)
- syms x;
- fx = 0.5 + 0.3*x + 3.9*x^2 - 4.7*x^3;
- fy = 1.5 + 0.3*x + 0.9*x^2 - 2.7*x^3;
-a = arch(fx, fy, 0, 1, 0.001);
-syms x;
 
-tstar(fx,fy,a,0.5,0.001)
+%t = [0:0.001:1];
+syms x;
+fx = 0.5 + 0.3*x + 3.9*x^2 - 4.7*x^3;
+fy = 1.5 + 0.3*x + 0.9*x^2 - 2.7*x^3;
+%fx = x;
+%fy = x;
+%m = subs(fx,x,t);
+%n = subs(fy,x,t);
+a = arch(fx, fy, 0, 1, 0.001);
+
+EPart(fx,fy,a,4,0.001);
 
