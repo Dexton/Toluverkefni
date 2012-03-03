@@ -1,5 +1,9 @@
 clear;
 clc;
+clf;
+
+t = cputime;
+
 % disp('x^2 tol=0.01');
 % syms x;
 % f = x^2;
@@ -63,11 +67,12 @@ clc;
 syms x;
 fx = 0.5 + 0.3*x + 3.9*x^2 - 4.7*x^3;
 fy = 1.5 + 0.3*x + 0.9*x^2 - 2.7*x^3;
-%fx = x;
-%fy = x;
+%fx = x^2;
+%fy = x^2;
 %m = subs(fx,x,t);
 %n = subs(fy,x,t);
-a = arch(fx, fy, 0, 1, 0.001);
+%a = arch(fx, fy, 0, 1, 0.001);
 
-EPart(fx,fy,a,4,0.001);
-
+%EPart(fx,fy,a,4,0.001);
+animate(fx,fy)
+e = cputime-t

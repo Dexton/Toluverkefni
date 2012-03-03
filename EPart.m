@@ -5,8 +5,9 @@ function Epart( fx, fy, a, n ,tol)
     p = [0:1/n:1];
     low = tstar(fx,fy,a,p(1),tol);
     for i = 1:n
+        p(i+1);
         high = tstar(fx,fy,a,p(i+1),tol);
-        t = [p(i):0.00001:p(i+1)];
+        t = [low:0.00001:high];
         xinterval = subs(fx,x,t);
         yinterval = subs(fy,x,t);
         hold on;
