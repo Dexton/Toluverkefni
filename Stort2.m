@@ -1,5 +1,8 @@
 clear;
 clc;
+clf;
+
+t = cputime;
 disp('x^2 tol=0.01');
 syms x;
 f = x^2;
@@ -28,6 +31,7 @@ tol = 0.001;
 figure;
 ezplot(f,[a-1,b+1]);
 Heildi(f,a,b,tol)
+
 % % 
 % % disp('Sin(x2^) tol=0.00001');
 % % syms x;
@@ -71,3 +75,7 @@ Heildi(f,a,b,tol)
 % 
 % EPart(fx,fy,a,4,0.001);
 
+
+%EPart(fx,fy,a,4,0.001);
+%animate(fx,fy)
+%e = cputime-t
